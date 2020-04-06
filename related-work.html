@@ -1,38 +1,4 @@
 <h1 id="fluid-media-format">Fluid Media Format</h1>
-<h2 id="research-thoughts">Research thoughts</h2>
-<ul>
-<li>My intuition is that a main research contribution of our work is to systematically study the forms of reference and alignment between different forms of existing multimodal media, produce knowledge about how authors are doing that or want to do that, and propose a high-level language-based way of specifying that in a DDF. </li>
-<li>How do we SYSTEMATICALLY study/code the forms of reference, alignment, juxtaposition between different forms of media?</li>
-<li>How can we scope this DOWN! Maybe just &quot;aligned text&quot;?</li>
-<li>What are existing ways of composing aligned &amp; referenced media?
-<ul>
-<li>&quot;timed text&quot;—the YT editor is pretty slick</li>
-<li>karaoke annotation</li>
-<li>LRC (subtitle file)</li>
-<li>aligned translations</li>
-<li>omg, WHAT??? https://en.wikipedia.org/wiki/Synchronized_Multimedia_Integration_Language</li>
-<li>1999???</li>
-<li>https://en.wikipedia.org/wiki/Timed_text</li>
-<li>https://en.wikipedia.org/wiki/Timed_Text_Markup_Language</li>
-<li>AUTHORING TOOLS? https://en.wikipedia.org/wiki/Synchronized_Multimedia_Integration_Language#Authoring_tools</li>
-<li>WAIT IT WORKS WITH SVG THOUGH!!</li>
-<li>https://en.wikipedia.org/wiki/HTML%2BTIME</li>
-<li>i truly am a multimedia person...bring it back</li>
-<li>Why are we seeing a resurgence in dynamic media? Or why are we not? Why did SMIL die? What is the difference between multimedia and whatever today is—dynamic media? Hypermedia? Why am I so obsessed with scrollytelling?</li>
-<li>I Guess.... Deep Learning + MOOCs + rise of internet + mainstream &quot;hypermedia&quot; (now it's just media)? 2002 vs 2020. Now we can synthesize speech, now we can automatically caption media and tag visuals in video, things are richer. I mean, it's NYT scrollytelling, doesn't get more mainstream than now</li>
-<li>Like, why isn't Amy Pavel's stuff hypermedia</li>
-</ul></li>
-<li></li>
-<li>Max: Something I want to grapple with personally for this project is the relative importance of encoding existing material into empirically determined primitives vs Reigniting student agency by deconstructing the content that was &quot;flattened&quot; in the first place. The representation in the lecturer's brain will always be richer than the student's, and the best tools reify these representations to play with live</li>
-<li>just thinking out loud some more: I want to steer the tool away from reinforcing the status quo on the student end. Students already are given lectures, videos, slides, and sparse explorables, if the DDF is just a compiler then all it helps are teachers (analogy: end users don't care about clang vs gcc).If the mappings aren't erased after compilation, and students benefit from the richer DDF representation, then we have a medium that's better than existing ones.</li>
-<li>3b1b videos are awesome, literate tutorials are awesome, and maybe the state of education would be better if we had '''more''' of them, but I do want to explore the richer axis we were brainstorming where the content is less flat</li>
-<li>richer media I'm not 100% sure what is &quot;better&quot; or &quot;more effective&quot; but I do like the aligned content with a rich underlying data structure like the ones we've been collecting</li>
-<li>but really any video, slides, etc which is more hypertext-like: where there's an underlying set of data that renders it and lets you query and interrogate the data semantically through the host medium of video/slides/etc</li>
-<li>like clicking &quot;x&quot; at 5:34 of some khan video and seeing where it appears and maybe a history of its manipulations</li>
-<li>and further (which doesn't really exist anywhere), a bricolage &quot;script&quot; environment where you can see the flattened content in context with all the broader ideas they were pulled from (?)</li>
-<li>Yeah, I like all these ideas, and I do think the idea of compilation makes these new media possible. I think in a paper, it would be great to demo 1-2 of these formats to show the claim that the richer/structure-preserving representation enables new capabilities without much additional work.</li>
-<li>We can repro all these existing diagrams... with these magic features that are enabled by a good design8:37Note that the magic part is more than just a cherry on top of the Penrose paper, it's part of why it's so fundamentally compelling/exciting, and we go to great lengths to show what the system can do that Illustrator can't</li>
-</ul>
 <h2 id="research-questions">Research questions</h2>
 <p>The key research challenges are:</p>
 <ul>
@@ -53,11 +19,15 @@
 <li>Example breakdowns of existing examples into language?</li>
 <li>Example recreations/augmentations/remixes of existing examples via the compiler?</li>
 <li>Communities and people to interview?</li>
-<li>How do existing languages / approaches work?</li>
+<li>How do existing languages / approaches work?
+<ul>
+<li>Authoring tools: What are existing ways of composing aligned &amp; referenced media?</li>
+</ul></li>
+<li>Why is this work particularly timely?</li>
+<li>How do we systematically study/code the forms of reference, alignment, juxtaposition between different forms of media?</li>
 </ul>
 <h2 id="related-work">Related work</h2>
-<ul>
-<li>Questionnaire:
+<h3 id="format">Format</h3>
 <ul>
 <li>Sources</li>
 <li>Name</li>
@@ -68,7 +38,6 @@
 <li>Input</li>
 <li>Output</li>
 <li>Limitations</li>
-</ul></li>
 </ul>
 <h3 id="ginga-ncl-date">Ginga / NCL (date?)</h3>
 <ul>
@@ -102,7 +71,13 @@
 <li>Seems to be dead since mid-2000s</li>
 </ul></li>
 </ul>
-<h3 id="videopuppet-httpswww.videopuppet.com">VideoPuppet https://www.videopuppet.com/</h3>
+<h3 id="videopuppet">VideoPuppet</h3>
+<ul>
+<li><a href="https://www.videopuppet.com/">Source</a>
+<ul>
+<li>TODO</li>
+</ul></li>
+</ul>
 <p>TODO</p>
 <h4 id="idyll">Idyll</h4>
 <p>TODO</p>
@@ -110,23 +85,24 @@
 <p>TODO</p>
 <h4 id="misc.">Misc.</h4>
 <ul>
-<li>YouTube Timed Text editor https://www.youtube.com/timedtext_editor?action_mde_edit_form=1&amp;v=Kas0tIxDvrg&amp;lang=en&amp;bl=vmp&amp;ui=hd&amp;ref=player&amp;tab=captions&amp;ar=1585953093029&amp;o=U</li>
-<li>&quot;Video Digests&quot; (Pavel, Agrawala, et al.) http://vis.berkeley.edu/papers/videodigests/videodigests_small.pdf</li>
+<li><a href="https://www.youtube.com/timedtext_editor?action_mde_edit_form=1&amp;v=Kas0tIxDvrg&amp;lang=en&amp;bl=vmp&amp;ui=hd&amp;ref=player&amp;tab=captions&amp;ar=1585953093029&amp;o=U">YouTube Timed Text editor</a></li>
+<li><a href="http://vis.berkeley.edu/papers/videodigests/videodigests_small.pdf">&quot;Video Digests&quot;</a> (Pavel, Agrawala, et al.)</li>
 </ul>
 <h2 id="examples">Examples</h2>
 <p>General examples of multimodal alignment:</p>
 <ul>
-<li>TEXT/IMAGE/SOUND: math explainer videos / slides</li>
-<li>TEXT/SOUND: music videos / karaoke videos / podcasts</li>
-<li>TEXT/IMAGE: reactive articles (e.g. incremental visualization)</li>
-<li>TEXT/TEXT: subtitles / translation</li>
-<li>TEXT/INTERACTION: What football will look like in the future, &quot;What is code&quot;...</li>
-<li>https://en.wikipedia.org/wiki/17776</li>
-<li>https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/</li>
-<li>The series was developed by Graham MacAree, who used a Vox Media tool that creates custom packages from standard article sets to give Bois creative leeway and to accommodate the series' weight on the SB Nation website. MacAree found that there were few resources online for achieving the desired effects.[4]</li>
-<li>As of Monday, &quot;17776&quot; had massive reader engagement. Fay Sliger, communications director at Vox Media, said in an email that the project has had more than 2.3 million pageviews since its publication and an average engagement time of more than 9 minutes. About 43 percent of readers — of which more than half are viewing the piece on mobile devices — had finished each installment of the series as of Friday.</li>
+<li>Text/Image/Sound: math explainer videos / slides</li>
+<li>Text/Sound: music videos / karaoke videos / podcasts</li>
+<li>Text/Image: reactive articles (e.g. incremental visualization)</li>
+<li>Text/Text: subtitles / translation</li>
+<li>Text/Interaction: scrollytelling</li>
 </ul>
-<p>Input formats: TODO</p>
+<p>Input formats:</p>
+<ul>
+<li>Plain text</li>
+<li>GUI</li>
+<li>Algorithmically generating (i.e. parsing)</li>
+</ul>
 <p>Output formats:</p>
 <ul>
 <li>Video with voiceover</li>
@@ -135,7 +111,10 @@
 <li>Scrolling/interactive webpage</li>
 <li>(Web) Slides with builds and speaker notes</li>
 </ul>
-<p>Conclusions: Synchronization, alignment, and reference matter! And are hard tasks that can benefit from automation, and free up iteration time. Quotes:</p>
+<p>Pain points:</p>
+<ul>
+<li>Synchronization, alignment, and reference matter, and are hard tasks that can benefit from automation, and free up iteration time.</li>
+</ul>
 <blockquote>
 <p>In 2016, two friends and I released an opensource tool and wanted to make some nice demos and tutorial videos. When creating videos, I ended up spending most of the time doing things that have nothing to do with the content, but with the boring tasks around synchronisation and alignment.</p>
 </blockquote>
@@ -146,6 +125,43 @@
 <p>(Faculty member in CS)</p>
 <p>Examples of artifacts:</p>
 <ul>
-<li>Jonathan Corum example http://style.org/tapestry/</li>
-<li>Ways of Hearing: podcast to book https://mitpress.mit.edu/books/ways-hearing</li>
+<li><a href="http://style.org/tapestry/">Jonathan Corum example</a></li>
+<li><a href="https://mitpress.mit.edu/books/ways-hearing">Ways of Hearing</a>: podcast to book</li>
 </ul>
+<h2 id="research-thoughts">Research thoughts</h2>
+<p>Katherine:</p>
+<blockquote>
+<p>My intuition is that a main research contribution of our work is to systematically study the forms of reference and alignment between different forms of existing multimodal media, produce knowledge about how authors are doing that or want to do that, and propose a high-level language-based way of specifying that in a DDF. </p>
+</blockquote>
+<p>Max:</p>
+<blockquote>
+<p>Something I want to grapple with personally for this project is the relative importance of encoding existing material into empirically determined primitives vs Reigniting student agency by deconstructing the content that was &quot;flattened&quot; in the first place. The representation in the lecturer's brain will always be richer than the student's, and the best tools reify these representations to play with live.</p>
+</blockquote>
+<blockquote>
+<p>just thinking out loud some more: I want to steer the tool away from reinforcing the status quo on the student end. Students already are given lectures, videos, slides, and sparse explorables, if the DDF is just a compiler then all it helps are teachers (analogy: end users don't care about clang vs gcc).If the mappings aren't erased after compilation, and students benefit from the richer DDF representation, then we have a medium that's better than existing ones.</p>
+</blockquote>
+<blockquote>
+<p>3b1b videos are awesome, literate tutorials are awesome, and maybe the state of education would be better if we had '''more''' of them, but I do want to explore the richer axis we were brainstorming where the content is less flat</p>
+</blockquote>
+<blockquote>
+<p>richer media: I'm not 100% sure what is &quot;better&quot; or &quot;more effective&quot; but I do like the aligned content with a rich underlying data structure like the ones we've been collecting</p>
+</blockquote>
+<blockquote>
+<p>but really any video, slides, etc which is more hypertext-like: where there's an underlying set of data that renders it and lets you query and interrogate the data semantically through the host medium of video/slides/etc</p>
+</blockquote>
+<blockquote>
+<p>like clicking &quot;x&quot; at 5:34 of some khan video and seeing where it appears and maybe a history of its manipulations</p>
+</blockquote>
+<blockquote>
+<p>and further (which doesn't really exist anywhere), a bricolage &quot;script&quot; environment where you can see the flattened content in context with all the broader ideas they were pulled from (?)</p>
+</blockquote>
+<p>Katherine:</p>
+<blockquote>
+<p>Yeah, I like all these ideas, and I do think the idea of compilation makes these new media possible. I think in a paper, it would be great to demo 1-2 of these formats to show the claim that the richer/structure-preserving representation enables new capabilities without much additional work.</p>
+</blockquote>
+<blockquote>
+<p>We can repro all these existing diagrams... with these magic features that are enabled by a good design</p>
+</blockquote>
+<blockquote>
+<p>Note that the magic part is more than just a cherry on top of the Penrose paper, it's part of why it's so fundamentally compelling/exciting, and we go to great lengths to show what the system can do that Illustrator can't</p>
+</blockquote>

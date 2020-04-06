@@ -1,5 +1,7 @@
 # Finally, A "Swiss Army Knife" For Media Formats
 
+<img src="media/system.png" width=500>
+
 What kinds of media do you consume over the course of a typical day on your computer? You might read a book, watch a movie, listen to a podcast, read the news, or scroll through text posts on a social media platform. That is, you're interacting with digital forms of physical media: a PDF, a mp4, a mp3, and a .txt file are all archival formats for analog media, and a web page is easily printable. 
 
 For a long time, early adopters and programmers have produced content in forms of new media, that is media native to the digital and networked medium, that can't be reproduced in physical form. You can't print the award-winning New York Times article "Snowfall," nor the innovative SB Nation article "17776." Further, hyperlinks, interaction-based acticles, "scrollytelling," and reactive/adaptive educational articles are all examples of content that is rich because it connects and aligns multiple types of media. But the general public has not been easily able to work in new media formats because the tools are missing. 

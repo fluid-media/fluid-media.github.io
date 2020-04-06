@@ -51,6 +51,8 @@ Other questions include:
 
 ## Related work
 
+This section summarizes the three most relevant pieces of related work for what a language for rich media might have to provide. 
+
 ### Format
 
 - Sources
@@ -63,33 +65,45 @@ Other questions include:
 - Output
 - Limitations
 
-### Ginga / NCL (date?)
+### Ginga + Nested Context Language (NCL)
 
-Ginga is...
+Ginga is a Brazilian language developed in TK.
 
 Sources: 
 
 - [Ginga-NCL](http://www.iginga.org/files/biblio/2010_06_soares.pdf)
-- [NCL Page tutorials](http://www.ncl.org.br/en/tutorials0
+- [NCL Page tutorials](http://www.ncl.org.br/en/tutorials0)
 	- [Club NCL](http://club.ncl.org.br/node/31)
 	- [WebNCL](https://dl.acm.org/doi/10.1145/2382636.2382719)
 	- [NCL Composer](http://composer.telemidia.puc-rio.br/doku.php/en/start?redirect=1)
 
-### SMIL, XHTML + SMIL, HTML + TIME
+### Synchronized Multimedia Integration Language (SMIL)
 
 <img src="media/SMIL.png" width=500>
 
-SMIL is...
+The Synchronized Media Integration Language (SMIL) is an XML-based language for describing multimedia presentations. It seems to be have created in 1998 and died out in the mid-2000s. SMIL includes inline HTML tags for embedding different kinds of media content, specifying a region of placement, the timing, the linking between elements, and adaptivity for languages.
 
-Synchronized Media Integration Language
-XML-based language for describing multimedia presentations
-Seems to be dead since mid-2000s
+The upside of SMIL is that it can work with any semantic web element, including SVG. That's exciting because then animation and timing can be deeply linked to the visuals of a document. Another interesting part of SMIL is how its language design allows users to specify parallel or sequential presentation of content.
+
+From 2000-2010, there were a couple of efforts to extend semantic web standard with an element of time, including projects like the Timed Text Markup Language (TTML), SMIL + Time, (X)HTML + TIME, SMIL State, and timesheets.js. They all seem to have died out. 
+
+The SMIL State paper gives a great summary of SMIL in Section 3.3:
+
+> SMIL 2.1, the Synchronous Multimedia Integration Language [3, 4] is the W3C standard for presenting multimedia on the web. It is primarily an integration language: it contains references to media items, not the media data itself, and instructions on how those media items should be combined spatially and temporally. 
+
+> SMIL is a declarative language: relations between media objects (and substructures) are described, and the computation of the timeline follows from this. The main temporal composition operators available are parallel composition, sequential composition and selection of optional content. Composition is hierarchical: nodes cannot become active unless all of their ancestors are active. The declarative containment model has one large advantage: SMIL presentations can adapt automatically to varying bandwidth conditions and alternate content with different durations. The hierarchical temporal composition model is also a nice container for timed metadata, and allows structure-based deep linking into the content. 
+
+> There are a number of mechanisms in SMIL that allow the presentation to react to user input (events) and to modify the behavior of other sections of the presentation (SMIL Animation) but none of these break the basic containment model, they only modify behavior within those constraints. 
+
+> The containment model has one serious drawback, though: there is no way in which the path taken through the presentation can be used to influence future behavior of the presentation. Or, more informally: there are no variables. In addition, with events being the only communication channel a SMIL presentation can not exchange structured data with the outside world. This is a problem SMIL shares with many declarative languages. For example, functional languages have had to add constructs like effect classes [6] or monads [12, 18] to enable side-effects and input/output. Without these, their application domain would have been severely limited. 
 
 Sources:
 
+- [SMIL Wikipedia](https://en.wikipedia.org/wiki/Synchronized_Multimedia_Integration_Language)
 - SMIL authoring systems
+- Related standards: XHTML + SMIL, HTML + TIME
 - [TTML](https://en.wikipedia.org/wiki/Timed_Text_Markup_Language)
-- [SMIL + Time](https://homepages.cwi.nl/~jack/presentations/smilstate-for-rwab.pdf)
+- [SMIL State](https://homepages.cwi.nl/~jack/presentations/smilstate-for-rwab.pdf)
 - [Retro SMIL tutorial](https://homepages.cwi.nl/~media/SMIL/Tutorial/SMILTut.html)
 - [timesheets.js](http://wam.inrialpes.fr/timesheets/)
     - [other reference](https://ics.utc.fr/c2m/res/TimesheetsSoftware.pdf)
@@ -138,13 +152,13 @@ Pain points:
 
 - Synchronization, alignment, and reference matter, and are hard tasks that can benefit from automation, and free up iteration time. 
 
+(From VideoPuppet site)
+
 > In 2016, two friends and I released an opensource tool and wanted to make some nice demos and tutorial videos. When creating videos, I ended up spending most of the time doing things that have nothing to do with the content, but with the boring tasks around synchronisation and alignment.
 
-(VideoPuppet)
+(Quote from faculty member in CS)
 
 > "I find myself converting my written text into slides and then into video, but I'm always pointing at stuff (like a subpart of a diagram) in my slides and can't reference it in speech, so then I have to make these very granular builds for the slides, but then I have trouble syncing up what I'm saying to the builds"
-
-(Faculty member in CS)
 
 Examples of artifacts:
 
@@ -190,6 +204,8 @@ Katherine:
 
 </div>
 
+<div id="commento"></div>
+<script src="https://cdn.commento.io/js/commento.js"></script>
 
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -218,4 +234,3 @@ Katherine:
      /*      $('.all-content').sidenotes();*/
  });
 </script>
-

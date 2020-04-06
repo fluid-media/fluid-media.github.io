@@ -1,6 +1,10 @@
-<script async defer src="https://factlink.com/lib/dist/factlink_loader.min.js"></script>
-
-
+<!-- <script -->
+<!--   src="https://code.jquery.com/jquery-3.4.1.min.js" -->
+<!--     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" -->
+<!-- 	  crossorigin="anonymous"></script> -->
+<!-- <script src="lib/annotator-full.1.2.10/annotator-full.min.js"></script> -->
+<!-- <link rel="stylesheet" href="lib/annotator-full.1.2.10/annotator.min.css"> -->
+  
 # Fluid Media Format
 
 ## Research questions
@@ -43,48 +47,48 @@ Other questions include:
 
 ### Ginga / NCL (date?)
 
-- Sources
-   - Ginga-NCL http://www.iginga.org/files/biblio/2010_06_soares.pdf
-   - NCL Page tutorials
-	 - http://www.ncl.org.br/en/tutorials
-	 - http://club.ncl.org.br/node/31
-	 - WebNCL https://dl.acm.org/doi/10.1145/2382636.2382719
-	 - NCL Composer http://composer.telemidia.puc-rio.br/doku.php/en/start?redirect=1
+Ginga is...
 
-### SMIL, XHTML + SMIL, HTML + TIME (date?)
+Sources: 
+
+- [Ginga-NCL](http://www.iginga.org/files/biblio/2010_06_soares.pdf)
+- [NCL Page tutorials](http://www.ncl.org.br/en/tutorials0
+	- [Club NCL](http://club.ncl.org.br/node/31)
+	- [WebNCL](https://dl.acm.org/doi/10.1145/2382636.2382719)
+	- [NCL Composer](http://composer.telemidia.puc-rio.br/doku.php/en/start?redirect=1)
+
+### SMIL, XHTML + SMIL, HTML + TIME
 
 <img src="media/SMIL.png" width=500>
 
-  - Sources
-	- SMIL authoring systems
-	- TTML https://en.wikipedia.org/wiki/Timed_Text_Markup_Language
-	- SMIL + Time https://homepages.cwi.nl/~jack/presentations/smilstate-for-rwab.pdf
-	- Retro AF SMIL tutorial https://homepages.cwi.nl/~media/SMIL/Tutorial/SMILTut.html
-	- timesheets.js http://wam.inrialpes.fr/timesheets/
-	  - https://ics.utc.fr/c2m/res/TimesheetsSoftware.pdf
-	- SMIL is dead
-  - Notes
-	- Synchronized Media Integration Language
-	- XML-based language for describing multimedia presentations
-	- Seems to be dead since mid-2000s
+SMIL is...
+
+Synchronized Media Integration Language
+XML-based language for describing multimedia presentations
+Seems to be dead since mid-2000s
+
+Sources:
+
+- SMIL authoring systems
+- [TTML](https://en.wikipedia.org/wiki/Timed_Text_Markup_Language)
+- [SMIL + Time](https://homepages.cwi.nl/~jack/presentations/smilstate-for-rwab.pdf)
+- [Retro SMIL tutorial](https://homepages.cwi.nl/~media/SMIL/Tutorial/SMILTut.html)
+- [timesheets.js](http://wam.inrialpes.fr/timesheets/)
+    - [other reference](https://ics.utc.fr/c2m/res/TimesheetsSoftware.pdf)
 
 ### VideoPuppet 
 
-- [Source](https://www.videopuppet.com/)
-    - TODO
+Their slogan is "edit video as easily as editing text!"
 
-TODO
+Sources:
 
-#### Idyll
-
-TODO
-
-#### manim
-
-TODO
+- [Main page](https://www.videopuppet.com/)
+- [Show HN: From Markdown to Video](https://news.ycombinator.com/item?id=22718854)
 
 #### Misc.
 
+- Idyll (language for creating interactive web documents)
+- manim (3blue1brown's library)
 - [YouTube Timed Text editor](https://www.youtube.com/timedtext_editor?action_mde_edit_form=1&v=Kas0tIxDvrg&lang=en&bl=vmp&ui=hd&ref=player&tab=captions&ar=1585953093029&o=U)
 - ["Video Digests"](http://vis.berkeley.edu/papers/videodigests/videodigests_small.pdf) (Pavel, Agrawala, et al.)
 
@@ -159,3 +163,7 @@ Katherine:
 
 > Note that the magic part is more than just a cherry on top of the Penrose paper, it's part of why it's so fundamentally compelling/exciting, and we go to great lengths to show what the system can do that Illustrator can't
 
+<!-- <script> -->
+<!-- var ann = new Annotator(document.body);  -->
+<!-- ann.setupPlugins() -->
+<!-- </script> -->

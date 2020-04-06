@@ -128,7 +128,9 @@ Sources:
 
 VideoPuppet is a very recent approach to using domain-specific language to create media. (It was posted on Hacker News just a few days ago; h/t Max for the link.) Their slogan is "edit video as easily as editing text!" The software turns Markdown annotations into video, and can go from slides to video as well. 
 
-They are a startup, so their work is not open-source. They advertise their services as follows:
+<img src="media/videopuppet.png" width=600>
+
+They are a startup, so their work is not open-source, and I can't find more examples or thinking behind their language design besides the one "Hello World" example. They advertise their services as follows:
 
 > Video Puppet will automatically create video clips from images, align audio and video segments, add captions, and even create a life-like narration audio from your text.
 

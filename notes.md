@@ -14,6 +14,9 @@
 <nav class="toc toc-right js-toc relative z-1 transition--300 absolute pa4 is-position-fixed">
 </nav>
 
+<div id="commento"></div>
+<script defer src="https://cdn.commento.io/js/commento.js"></script>
+
 <div class="content js-toc-content pa4">
 
 <!-- <script -->
@@ -203,9 +206,6 @@ Katherine:
 </div>
 
 </div>
-
-<div id="commento"></div>
-<script src="https://cdn.commento.io/js/commento.js"></script>
 
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"

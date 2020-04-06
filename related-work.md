@@ -1,5 +1,4 @@
-<img src="media/smil.png" width=500>
-<img src="smil.png" width=500>
+<img src="media/SMIL.png" width=500>
 
 notes
 

@@ -25,6 +25,11 @@
   
 # Fluid Media Format
 
+## Previously
+
+- [Figma](https://www.figma.com/file/CHSpPcKQUyjrWLeL7Paf6g/Ideas?node-id=325%3A60)
+- [Project description](https://docs.google.com/document/d/1-KSjliB7obFf82qzgVOnCwoK7umWRR84X3aJbs5Ss_k/edit)
+
 ## Research questions
 
 The key research challenges are:
@@ -121,19 +126,34 @@ Sources:
 
 ### VideoPuppet 
 
-Their slogan is "edit video as easily as editing text!"
+VideoPuppet is a very recent approach to using domain-specific language to create media. (It was posted on Hacker News just a few days ago; h/t Max for the link.) Their slogan is "edit video as easily as editing text!" The software turns Markdown annotations into video, and can go from slides to video as well. 
+
+They are a startup, so their work is not open-source. They advertise their services as follows:
+
+> Video Puppet will automatically create video clips from images, align audio and video segments, add captions, and even create a life-like narration audio from your text.
+
+> To top it off, you'll be able to update the video easily when your content changes.
+
+Part of their "value add" seems to be the software's ability to follow granular directions for automatically scripting the timing of the video. I'm not totally clear on the technical challenges here; maybe it's synthesizing the voices at the right time and speed (and with pauses) so it syncs up with the corresponding visual content. If so, that seems like a fun and worthwhile technical challenge. As they say:
+
+> it will automatically speed up or slow down clips to match the narration, loop audio or video, and create smooth transitions between scenes.
+
+Note that they use synthesized voices to narrate voiceover.
 
 Sources:
 
 - [Main page](https://www.videopuppet.com/)
 - [Show HN: From Markdown to Video](https://news.ycombinator.com/item?id=22718854)
+- [VideoPuppet examples (GitHub)](https://github.com/videopuppet/examples)
 
-#### Misc.
+#### Other related work
 
 - Idyll (language for creating interactive web documents)
 - manim (3blue1brown's library)
 - [YouTube Timed Text editor](https://www.youtube.com/timedtext_editor?action_mde_edit_form=1&v=Kas0tIxDvrg&lang=en&bl=vmp&ui=hd&ref=player&tab=captions&ar=1585953093029&o=U)
-- ["Video Digests"](http://vis.berkeley.edu/papers/videodigests/videodigests_small.pdf) (Pavel, Agrawala, et al.)
+- ["Video Digests"](http://vis.berkeley.edu/papers/videodigests/videodigests_small.pdf) paper (Pavel, Agrawala, et al.)
+- Thapl
+- lang.video
 
 ## Examples
 

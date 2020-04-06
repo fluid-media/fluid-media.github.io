@@ -1,3 +1,6 @@
+<script async defer src="https://factlink.com/lib/dist/factlink_loader.min.js"></script>
+
+
 # Fluid Media Format
 
 ## Research questions

@@ -1,3 +1,8 @@
+---
+layout: post
+title: Blogging Like a Hacker
+---
+
 <img src="media/SMIL.png" width=500>
 
 notes

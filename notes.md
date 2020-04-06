@@ -1,3 +1,5 @@
+
+<title>notes</title>
 <!-- <link rel="stylesheet" href="https://acdlite.github.io/jquery.sidenotes/css/main.css"> -->
 
 <!-- https://tscanlin.github.io/tocbot/ -->

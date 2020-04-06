@@ -67,11 +67,22 @@ This section summarizes the three most relevant pieces of related work for what 
 
 ### Ginga + Nested Context Language (NCL)
 
-Ginga is a Brazilian language developed in TK.
+Ginga is a middleware language and open specification developed originally for interactive and multimedia IPTV applications by the Telemidia Lab in Brazil from about 2005-2010. It is now the standard for terrestrial digital TV in most of Latin America. It relies on a language called the Nested Context Language, or NCL. As the Ginga-NCL paper summarizes it:
+
+> Nested Context Language, [is] a domain-specific declarative language targeting multimedia application authoring. As a glue language, NCL relates media objects in time and space without restricting or imposing any media content type, including media objects with imperative and declarative code written using other languages. Other NCL features include support for multidevice presentations, content adaptations, presentation adaptations, and advanced code reuse. Ginga-NCL allows NCL applications to be modified on the fly by means of live editing commands.
+
+NCL also looks quite a bit like XML, and seems very related to SMIL (below). It also integrates with Lua, another programming language popular in Brazil.
+
+<img src="media/NCL.png" width=500>
+
+From the NCL Club site, it seems like NCL has graphical authoring environments that can support artifacts such as game development, though it's hard for me to figure out its capacities since most of the documentation is written in Portuguese.
 
 Sources: 
 
-- [Ginga-NCL](http://www.iginga.org/files/biblio/2010_06_soares.pdf)
+- [Ginga on Wikipedia](https://en.wikipedia.org/wiki/Ginga_(middleware))
+- [Ginga official page](http://www.ginga.org.br/en)
+- [Ginga-NCL](http://www.iginga.org/files/biblio/2010_06_soares.pdf) (Soares et al, 2010)
+- [Awesome NCL projects on GitHub](https://github.com/TeleMidia/awesome-ncl)
 - [NCL Page tutorials](http://www.ncl.org.br/en/tutorials0)
 	- [Club NCL](http://club.ncl.org.br/node/31)
 	- [WebNCL](https://dl.acm.org/doi/10.1145/2382636.2382719)
@@ -79,9 +90,9 @@ Sources:
 
 ### Synchronized Multimedia Integration Language (SMIL)
 
-<img src="media/SMIL.png" width=500>
-
 The Synchronized Media Integration Language (SMIL) is an XML-based language for describing multimedia presentations. It seems to be have created in 1998 and died out in the mid-2000s. SMIL includes inline HTML tags for embedding different kinds of media content, specifying a region of placement, the timing, the linking between elements, and adaptivity for languages.
+
+<img src="media/SMIL.png" width=500>
 
 The upside of SMIL is that it can work with any semantic web element, including SVG. That's exciting because then animation and timing can be deeply linked to the visuals of a document. Another interesting part of SMIL is how its language design allows users to specify parallel or sequential presentation of content.
 

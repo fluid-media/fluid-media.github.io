@@ -9,6 +9,9 @@ notes
 <p><link rel="stylesheet" href="styles/toolkit-styles.css" class="next-head"></p>
 <div class="mw7 center dark-gray lh-copy all-content">
 <p><nav class="toc toc-right js-toc relative z-1 transition--300 absolute pa4 is-position-fixed"> </nav></p>
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+<!-- <script src="lib/comments/inlineDisqussions.js"></script> -->
+<!-- <link rel="stylesheet" type="text/css" href="inlineDisqussions.css" /> -->
 <div class="content js-toc-content pa4">
 <!-- <script -->
 <!--   src="https://code.jquery.com/jquery-3.4.1.min.js" -->
@@ -22,13 +25,16 @@ notes
 <p>no results for “literate deep learning” “literate machine learning”</p>
 <p>Toward a rich explanatory medium for deep learning models</p>
 <p>but hear me out—executable documentation explaining visually how machine learning models work, with references to the real model running in the browser.</p>
-<p>This has input-output examples, math notation, prose, and pictures — for <sub>people</sub> — and linking that to the runnable code</p>
+<p>What does a rich explanatory medium for deep learning models need?</p>
+<p>This has input-output examples, math notation, prose, and pictures — for <sub>people</sub> — and linking that to the runnable code. It needs references/deeplinks to the code, and the ability to run examples in the browser, visually.</p>
+<p>the point is that the domain has its own domain-specific language of biases, weights, layers, inputs, outputs, etc. that can be modeled in a DSL?</p>
+<p>What does it NOT need? The ability to develop new models.</p>
 <p>Like, can we make something as good as the mathigon environment but for machine learning models (or hi-assurance models) (running in the browser) https://mathigon.org/course/fractals/introduction</p>
 <p>IDEAL DEMO: TODO</p>
 <h2 id="motivation-and-applications">Motivation and applications</h2>
 <p>I’m actually thinking something like these NIST high-assurance specs, or other documents that vendors provide. People HAVE TO WRITE IT https://csrc.nist.gov/publications/detail/sp/800-90a/archive/2012-01-23</p>
 <p>how do people do algorithmic accountability stuff, like, now, how does the government audit</p>
-<p>this could be good for hi-assurance executable specs for legislation, etc? the point is that the domain has its own domain-specific language of biases, weights, layers, inputs, outputs, etc. that can be modeled in a DSL?</p>
+<p>this could be good for hi-assurance executable specs for legislation, etc?</p>
 <p>strong positive signal from angela — seems super necessary, etc.</p>
 <h2 id="related-work">Related work</h2>
 <p>This is not for figuring out why your model isn’t doing the thing it was supposed to do. This is not for debugging or making models or transparency, this is for explaining and referring to an existing model.</p>
@@ -81,16 +87,16 @@ notes
 <p>does tf.js have a tensorboard equivalent?</p>
 <p>I mean, at this point, you need to really be able to understand and explain the models yourself?</p>
 <p>Who has done this by hand, but really well?</p>
+</div>
+</div>
 <!-- <script> -->
-<!-- var ann = new Annotator(document.body);  -->
-<!-- ann.setupPlugins() -->
+<!-- disqus_shortname = 'fluid_media'; -->
+<!-- jQuery(document).ready(function() { -->
+<!--    jQuery("p").inlineDisqussions(); -->
+<!-- }); -->
 <!-- </script> -->
-</div>
-</div>
-<div id="commento">
-
-</div>
-<script defer src="https://cdn.commento.io/js/commento.js"></script>
+<!-- <div id="commento"></div> -->
+<!-- <script defer src="https://cdn.commento.io/js/commento.js"></script> -->
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="

@@ -1,4 +1,3 @@
-
 <title>notes</title>
 <!-- <link rel="stylesheet" href="https://acdlite.github.io/jquery.sidenotes/css/main.css"> -->
 
@@ -15,6 +14,10 @@
 
 <nav class="toc toc-right js-toc relative z-1 transition--300 absolute pa4 is-position-fixed">
 </nav>
+
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+<!-- <script src="lib/comments/inlineDisqussions.js"></script> -->
+<!-- <link rel="stylesheet" type="text/css" href="inlineDisqussions.css" /> -->
 
 <div class="content js-toc-content pa4">
 
@@ -37,7 +40,13 @@ Toward a rich explanatory medium for deep learning models
 
 but hear me out—executable documentation explaining visually how machine learning models work, with references to the real model running in the browser. 
 
-This has input-output examples, math notation, prose, and pictures — for ~people~ — and linking that to the runnable code
+What does a rich explanatory medium for deep learning models need?
+
+This has input-output examples, math notation, prose, and pictures — for ~people~ — and linking that to the runnable code. It needs references/deeplinks to the code, and the ability to run examples in the browser, visually.
+
+the point is that the domain has its own domain-specific language of biases, weights, layers, inputs, outputs, etc. that can be modeled in a DSL?
+
+What does it NOT need? The ability to develop new models. 
 
 Like, can we make something as good as the mathigon environment but for machine learning models (or hi-assurance models) (running in the browser) https://mathigon.org/course/fractals/introduction
 
@@ -50,7 +59,7 @@ https://csrc.nist.gov/publications/detail/sp/800-90a/archive/2012-01-23
 
 how do people do algorithmic accountability stuff, like, now, how does the government audit
 
-this could be good for hi-assurance executable specs for legislation, etc? the point is that the domain has its own domain-specific language of biases, weights, layers, inputs, outputs, etc. that can be modeled in a DSL?
+this could be good for hi-assurance executable specs for legislation, etc? 
 
 strong positive signal from angela — seems super necessary, etc.
 
@@ -121,18 +130,19 @@ I mean, at this point, you need to really be able to understand and explain the 
 
 Who has done this by hand, but really well?
 
+</div>
+
+</div>
+
 <!-- <script> -->
-<!-- var ann = new Annotator(document.body);  -->
-<!-- ann.setupPlugins() -->
+<!-- disqus_shortname = 'fluid_media'; -->
+<!-- jQuery(document).ready(function() { -->
+<!-- 	jQuery("p").inlineDisqussions(); -->
+<!-- }); -->
 <!-- </script> -->
 
-</div>
-
-</div>
-
-<div id="commento"></div>
-<script defer src="https://cdn.commento.io/js/commento.js"></script>
-
+<!-- <div id="commento"></div> -->
+<!-- <script defer src="https://cdn.commento.io/js/commento.js"></script> -->
 
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"

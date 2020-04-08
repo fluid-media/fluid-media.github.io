@@ -35,9 +35,11 @@
   
 # DeepDocs: Toward a rich explanatory medium for deep learning models
 
+_(hover over a paragraph to make a comment)_
+
 ## Proposal
 
-It's critically important for people to understand how algorithms work, and in particular, how deep learning algorithms work. Not only is it important for technically-minded people like model developers and model users (e.g. data scientists and UI designers), it's important for general scientific literacy. As ML algorithms come to be embedded in more of the fabric of daily life, it's important to provide clear specifications and documentation of these models at a high level, from human to human. A policy expert, lawmaker, judge, activist, or member of the public should have the right to read the documentation of an machine learning algorithm deployed by the government that might make decisions concerning their daily lives, such as food stamp allocation or bail decisions. It is also particularly important to make it easier to document deep learning algorithms given their popular conception as "black boxes" or "AI magic."
+As machine learning models become woven into the fabric of daily life, it's important to provide clear explanations of how these models work, from human to human. Not only are clear explanations important for technically-minded people like model developers and users (e.g. data scientists and UI designers), it's important for general scientific literacy. A policy expert, lawmaker, judge, activist, or member of the public should have the right to read the documentation of a machine learning model deployed by the government that might make decisions concerning their daily lives, such as food stamp allocation or bail decisions. It is also particularly important to make it easier to document deep learning algorithms given their reputation as "black boxes" and "AI magic." 
 
 The idea to document important algorithms is not novel; the NIST standards agency (part of the US government) has released human-readable specifications of high-assurance cryptography primitives, and the W3C (an international consortium) releases human-readable documentation of Web standards. However, the tool support for creating such rich documentation is lacking. To _explain_ an algorithm means centering all the modalities that people use: first, prose, examples, and pictures, and then mathematical notation and pseudocode; to understand a system, any technical person will read the code last. But centering prose and pictures, as in a conventional explanation, means losing the context of the algorithm; any technical person will bemoan the difficulty of figuring out what prose is referring to, the ambiguity of prose, and the irritation of having to read code in a "dead" document that has already gone out of sync with an implementation. 
 
@@ -61,9 +63,10 @@ Such a medium would include first-class support for the following _explanatory, 
 - plots, e.g. visualization of the loss function
 - references and deeplinks to the model that link several representations (prose, math, picture, code)
 
-It might include support for specific iterations:
+It might include support for documenting _specific_ deployed models:
 
-- visualizing specific trained networks (with specific parameters) and specific datasets, and the performance or failures of these models
+- visualizing specific trained networks (with specific parameters) and the performance or failures of these models
+- documenting the datasets and training processes that gave rise to these parameters
 - running the loss function
 
 It may include support for the following modalities at a dynamic level:
@@ -104,6 +107,9 @@ The things that are out of scope for this project are the things that are out of
 
 Questions
 
+- How important is it to document a specific trained model, vs. documenting the more generic model architecture? The latter is easier; the former seems potentially more useful, but harder technically (and a more crowded space).
+    - The number of people who _train_ models seems much larger than the number of people who _design_ models. So, shouldn't it be more important to make it easier to document training processes?
+    - Some large model architectures are now designed by computers (e.g. AutoML). How can you write technical docs for an architecture that a person didn't design?
 - Pain points: How can we make an authoring environment for explaining deep learning models that is most useful for authors; e.g. what are they trying to say or do that existing tools don't support well? 
 - Pain points: How can we design an explanatory medium for deep learning models that is most useful for readers; e.g. what are they trying to learn or do that existing artifacts don't support well?
 - What are the right authoring primitives for a computational medium for _explanation_? 

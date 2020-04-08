@@ -1,4 +1,4 @@
-<title>notes</title>
+<title>deepdocs</title>
 <!-- <link rel="stylesheet" href="https://acdlite.github.io/jquery.sidenotes/css/main.css"> -->
 
 <!-- https://tscanlin.github.io/tocbot/ -->
@@ -33,30 +33,32 @@
 <!-- <script src="lib/annotator-full.1.2.10/annotator-full.min.js"></script> -->
 <!-- <link rel="stylesheet" href="lib/annotator-full.1.2.10/annotator.min.css"> -->
   
-# Toward a rich explanatory medium for deep learning models
+# DeepDocs: Toward a rich explanatory medium for deep learning models
 
 ## Proposal
 
-It's critically important for people to understand how algorithms work, and in particular, how deep learning algorithms work. Not only is it important for technically-minded people like model developers and model users (e.g. data scientists and UI designers), it's important for general scientific literacy. As ML algorithms come to be embedded in more of the fabric of daily life, it's important to provide clear specifications and documentation of these models at a high-level, from human to human. A policy expert, lawmaker, judge, activist, or member of the public should have the right to read the documentation of an machine learning algorithm deployed by the government that might make decisions concerning their daily lives, such as food stamp allocation or bail decisions. The idea to document important algorithms is not novel; the NIST agency has released human-readable specifications of high-assurance cryptography primitives, and the W3C releases human-readable documentation of Web protocols. However, the tool support for creating such documentation is lacking; to _explain_ an algorithm means centering all the modalities that people use: first, prose and pictures, and then mathematical notation and pseudocode; any technical person will read a detailed code listing last. It is particularly important to document deep learning algorithms given their popular conception as "black boxes" or "AI magic," and it is an easier task, since this domain has a more small and specialized vocabulary than the wider universe of code. 
+It's critically important for people to understand how algorithms work, and in particular, how deep learning algorithms work. Not only is it important for technically-minded people like model developers and model users (e.g. data scientists and UI designers), it's important for general scientific literacy. As ML algorithms come to be embedded in more of the fabric of daily life, it's important to provide clear specifications and documentation of these models at a high level, from human to human. A policy expert, lawmaker, judge, activist, or member of the public should have the right to read the documentation of an machine learning algorithm deployed by the government that might make decisions concerning their daily lives, such as food stamp allocation or bail decisions. It is also particularly important to make it easier to document deep learning algorithms given their popular conception as "black boxes" or "AI magic."
 
-This project proposes several research hypotheses: 
+The idea to document important algorithms is not novel; the NIST standards agency (part of the US government) has released human-readable specifications of high-assurance cryptography primitives, and the W3C (an international consortium) releases human-readable documentation of Web standards. However, the tool support for creating such rich documentation is lacking. To _explain_ an algorithm means centering all the modalities that people use: first, prose, examples, and pictures, and then mathematical notation and pseudocode; to understand a system, any technical person will read the code last. But centering prose and pictures, as in a conventional explanation, means losing the context of the algorithm; any technical person will bemoan the difficulty of figuring out what prose is referring to, the ambiguity of prose, and the irritation of having to read code in a "dead" document that has already gone out of sync with an implementation. 
+
+Clearly, what is needed is a hybrid medium that centers all of these modalities of technical explanation. One promising start at such as medium is the emergent genre of computational notebooks, yet the notebook medium is well-known for its tension between exploration and explanation; most notebooks end up as a messy series of code-centric experiments where the author doesn't know what's going on, much less the reader. Toward creating this new medium for deep technical explanation, this project proposes several research hypotheses: 
 
 *Hypothesis 1*: Providing a rich explanatory medium for deep learning models will make it easier for experts to author documentation of models. This documentation will be easier for technically-minded laypeople to understand and to verify.
 
 *Hypothesis 2*: We can design an environment for authoring rich, executable, visual documentation linked directly to the math and code for a real machine learning model, running in the browser.
 
-*Hypothesis 3*: This new medium will both improve the authoring experience for authors and result in more helpful artifacts for readers.
+*Hypothesis 3*: Our particular design of this new medium will, in fact, both improve the authoring experience for authors and result in more helpful artifacts for readers.
 
 Such a project has the potential to provide the basis for clear human-to-human communication and specification of deep learning algorithms, enabling these crucial algorithms to be more clearly understood, audited, and edited by domain experts and by an interested member of the public.
 
 Such a medium would include first-class support for the following _explanatory, narrative_ modalities at a static, generic specification level:
 
 - prose
-- input-output examples
+- concrete examples, e.g. input-output pairs
 - math notation
 - pseudocode
-- pictures of model architectures
-- visualization of the loss function
+- diagrams, e.g. pictures of model architectures
+- plots, e.g. visualization of the loss function
 - references and deeplinks to the model that link several representations (prose, math, picture, code)
 
 It might include support for specific iterations:
@@ -69,7 +71,7 @@ It may include support for the following modalities at a dynamic level:
 - the ability to run examples in the browser (e.g. code snippets or inference)
 - the ability to visualize and document the training process (optimization)
 
-Again, *Hypothesis 2* is likely to be true because the domain of deep learning has its own very domain-specific language of biases, weights, layers, inputs, outputs, etc. that can be modeled in a domain-specific language or annotations. 
+*Hypothesis 2* (that designing this environment is a tractable problem) is likely to be true because the domain of deep learning has its own very domain-specific language of biases, weights, layers, inputs, outputs, etc. that can be modeled in a domain-specific language or annotations. 
 
 The ideal demo (or teaser figure) for such a medium looks like this:
 
@@ -107,6 +109,7 @@ Questions
 - What are the right authoring primitives for a computational medium for _explanation_? 
 - What are the right domain primitives to provide for the domain of deep learning, and at what level of abstraction?
 - Should we do a formative study, and if so, who can we interview? Who should we recruit for an evaluation study?
+- What affordances might we provide for automatically documenting a model, or else taking as much of the burden as possible off the author?
 
 Challenges
 

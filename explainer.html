@@ -24,73 +24,163 @@ notes
 <!-- <script src="lib/annotator-full.1.2.10/annotator-full.min.js"></script> -->
 <!-- <link rel="stylesheet" href="lib/annotator-full.1.2.10/annotator.min.css"> -->
 <h1 id="toward-a-rich-explanatory-medium-for-deep-learning-models">Toward a rich explanatory medium for deep learning models</h1>
-<h2 id="the-idea">The idea</h2>
-<p>Literate deep learning</p>
-<p>no results for “literate deep learning” “literate machine learning”</p>
-<p>Toward a rich explanatory medium for deep learning models</p>
-<p>but hear me out—executable documentation explaining visually how machine learning models work, with references to the real model running in the browser.</p>
-<p>What does a rich explanatory medium for deep learning models need?</p>
-<p>This has input-output examples, math notation, prose, and pictures — for <sub>people</sub> — and linking that to the runnable code. It needs references/deeplinks to the code, and the ability to run examples in the browser, visually.</p>
-<p>the point is that the domain has its own domain-specific language of biases, weights, layers, inputs, outputs, etc. that can be modeled in a DSL?</p>
-<p>What does it NOT need? The ability to develop new models.</p>
-<p>Like, can we make something as good as the mathigon environment but for machine learning models (or hi-assurance models) (running in the browser) https://mathigon.org/course/fractals/introduction</p>
-<p>IDEAL DEMO: TODO</p>
-<h2 id="motivation-and-applications">Motivation and applications</h2>
-<p>I’m actually thinking something like these NIST high-assurance specs, or other documents that vendors provide. People HAVE TO WRITE IT https://csrc.nist.gov/publications/detail/sp/800-90a/archive/2012-01-23</p>
-<p>how do people do algorithmic accountability stuff, like, now, how does the government audit</p>
-<p>this could be good for hi-assurance executable specs for legislation, etc?</p>
-<p>strong positive signal from angela — seems super necessary, etc.</p>
-<h2 id="related-work">Related work</h2>
-<p>This is not for figuring out why your model isn’t doing the thing it was supposed to do. This is not for debugging or making models or transparency, this is for explaining and referring to an existing model.</p>
-<p>This is not a computational notebook (e.g. colab or jupyter), which is for really running and building the thing.</p>
+<h2 id="proposal">Proposal</h2>
+<p>It's critically important for people to understand how algorithms work, and in particular, how deep learning algorithms work. Not only is it important for technically-minded people like model developers and model users (e.g. data scientists and UI designers), it's important for general scientific literacy. As ML algorithms come to be embedded in more of the fabric of daily life, it's important to provide clear specifications and documentation of these models at a high-level, from human to human. A policy expert, lawmaker, judge, activist, or member of the public should have the right to read the documentation of an machine learning algorithm deployed by the government that might make decisions concerning their daily lives, such as food stamp allocation or bail decisions. The idea to document important algorithms is not novel; the NIST agency has released human-readable specifications of high-assurance cryptography primitives, and the W3C releases human-readable documentation of Web protocols. However, the tool support for creating such documentation is lacking; to <em>explain</em> an algorithm means centering all the modalities that people use: first, prose and pictures, and then mathematical notation and pseudocode; any technical person will read a detailed code listing last. It is particularly important to document deep learning algorithms given their popular conception as &quot;black boxes&quot; or &quot;AI magic,&quot; and it is an easier task, since this domain has a more small and specialized vocabulary than the wider universe of code.</p>
+<p>This project proposes several research hypotheses:</p>
+<p><em>Hypothesis 1</em>: Providing a rich explanatory medium for deep learning models will make it easier for experts to author documentation of models. This documentation will be easier for technically-minded laypeople to understand and to verify.</p>
+<p><em>Hypothesis 2</em>: We can design an environment for authoring rich, executable, visual documentation linked directly to the math and code for a real machine learning model, running in the browser.</p>
+<p><em>Hypothesis 3</em>: This new medium will both improve the authoring experience for authors and result in more helpful artifacts for readers.</p>
+<p>Such a project has the potential to provide the basis for clear human-to-human communication and specification of deep learning algorithms, enabling these crucial algorithms to be more clearly understood, audited, and edited by domain experts and by an interested member of the public.</p>
+<p>Such a medium would include first-class support for the following <em>explanatory, narrative</em> modalities at a static, generic specification level:</p>
 <ul>
-<li>distill colab nb https://colab.research.google.com/github/tensorflow/lucid/blob/master/notebooks/activation-atlas/activation-atlas-simple.ipynb</li>
-<li>See in this notebook, they still put in pictures and notation. Also Q&amp;A format? http://d2l.ai/chapter_multilayer-perceptrons/mlp-scratch.html#the-loss-function</li>
-<li>https://colab.research.google.com/github/d2l-ai/d2l-en-colab/blob/master/chapter_convolutional-neural-networks/pooling.ipynb#scrollTo=Ql_gtyIxNkJO</li>
+<li>prose</li>
+<li>input-output examples</li>
+<li>math notation</li>
+<li>pseudocode</li>
+<li>pictures of model architectures</li>
+<li>visualization of the loss function</li>
+<li>references and deeplinks to the model that link several representations (prose, math, picture, code)</li>
 </ul>
-<p>This is not Dan Amelang's thing, which is great but is for really modeling industrial-strength NNs.</p>
+<p>It might include support for specific iterations:</p>
 <ul>
-<li>of course, dan amelang’s work is the closest https://app.reduct.video/e/the-dynamic-media-dream-e4ed367417-4d5acec7aeed995cf021/</li>
+<li>visualizing specific trained networks (with specific parameters) and specific datasets, and the performance or failures of these models</li>
+<li>running the loss function</li>
 </ul>
-<p>This is not a visual environment for making ML models, like Runway or Lobe.</p>
+<p>It may include support for the following modalities at a dynamic level:</p>
 <ul>
-<li>https://runwayml.com/</li>
-<li>sony NN console https://dl.sony.com/console/#/project https://support.dl.sony.com/docs/tutorial-training-using-a-sample-project/</li>
+<li>the ability to run examples in the browser (e.g. code snippets or inference)</li>
+<li>the ability to visualize and document the training process (optimization)</li>
 </ul>
-<p>This is not a neural network playground.</p>
+<p>Again, <em>Hypothesis 2</em> is likely to be true because the domain of deep learning has its own very domain-specific language of biases, weights, layers, inputs, outputs, etc. that can be modeled in a domain-specific language or annotations.</p>
+<p>The ideal demo (or teaser figure) for such a medium looks like this:</p>
 <ul>
-<li>Obviously super related https://playground.tensorflow.org/#activation=tanh&amp;batchSize=10&amp;dataset=circle&amp;regDataset=reg-plane&amp;learningRate=0.03&amp;regularizationRate=0&amp;noise=0&amp;networkShape=4,2&amp;seed=0.05915&amp;showTestData=false&amp;discretize=false&amp;percTrainData=50&amp;x=true&amp;y=true&amp;xTimesY=false&amp;xSquared=false&amp;ySquared=false&amp;cosX=false&amp;sinX=false&amp;cosY=false&amp;sinY=false&amp;collectStats=false&amp;problem=classification&amp;initZero=false&amp;hideText=false</li>
-</ul>
-<p>This is not model cards or datasheets for datasets!</p>
+<li>A video showing the authoring experience for documenting an existing realistic tensorflow.js model (e.g. for computer vision): the environment puts all the parts of the model into a &quot;visual vocabulary&quot; that the author can draw from, and the author, as they write, can seamlessly make references to the code and link it to the mathematics of the model and a diagram of the model
 <ul>
-<li>Model cards (fat* ’19) https://arxiv.org/pdf/1810.03993.pdf</li>
-<li>Datasheets for datasets (workshop on FATML, ’18) https://www.microsoft.com/en-us/research/uploads/prod/2019/01/1803.09010.pdf</li>
-</ul>
-<p>This is not an architecture visualization library</p>
+<li>A user study on authors asking them to document the model with inline code comments, vs. a colab notebook, vs. a separate page (PDF or web), vs. this environment, asking them which experience they preferred. Plus, results from the authors, saying that this authoring experience was (ideally) faster, easier, and produced better results</li>
+<li>A video showing the editing experience for the model, where any edit to the model is automatically propagated to the documentation OR is flagged if it breaks some invariant in the documentation</li>
+</ul></li>
+<li>The final document, compared side-by-side to 1. the other docs that authors made in-environment and out-of-environment, showing that the final doc written in this env is clearly richer and linked directly to the code, and 2. other docs that people have made by hand (not in this study) are clearly ad-hoc and worse.
 <ul>
-<li>People still can’t draw diagrams https://datascience.stackexchange.com/questions/14899/how-to-draw-deep-learning-network-architecture-diagrams https://github.com/ashishpatel26/Tools-to-Design-or-Visualize-Architecture-of-Neural-Network</li>
+<li>A reader study asking technically-proficient laypeople which documentation they preferred, and possibly a test to see which documentation they learned more from reading, ideally showing that these docs are better.</li>
+</ul></li>
 </ul>
-<p>This is not a neural network textbook or journal article. obviously distill does it well (like the conv net windows)—but those aren’t explainers to technical people? more like research papers?</p>
+<p>(TODO: Make a mockup of the authoring experience, reading experience, and sample documentation for real ML models.)</p>
+<p>The idea is a combination of a couple of main pieces of related work:</p>
 <ul>
-<li>idyll has some nice work on explainers: https://idyll-lang.org/gallery/the-beginner-s-guide-to-dimensionality-reduction</li>
+<li>Rich, dynamic environments for learning mathematics: can we make something as good as the <a href="https://mathigon.org/course/fractals/introduction">Mathigon environment for learning about fractals</a> but for machine learning models? Note the deeplinking, interactivity, etc.</li>
+<li>Linking many representations of deep learning models as in <a href="https://app.reduct.video/e/the-dynamic-media-dream-e4ed367417-4d5acec7aeed995cf021/">Dan Amelang's work on executable neural network visual representations</a></li>
+<li><a href="https://arxiv.org/pdf/1810.03993.pdf">Model cards</a> that document a model's details, purpose, intended use, evaluation factors, success metrics, training and evaluation data, ethical considerations, caveats and recommendations, and dataviz of errors (false positives, negatives, etc.)</li>
+<li><a href="https://csrc.nist.gov/publications/detail/sp/800-90a/archive/2012-01-23">Government specifications for high-assurance algorithms</a> as in cryptography, which provide a high-level spec comprising math, pseudocode, input-output examples, diagrams, properties the model should satisfy, invariants, etc. but in a very loose and ad-hoc manner that has caused implementation bugs in the past</li>
+<li>Existing rich documentation for models, such as technical explainer articles (e.g. in <em>Distill</em>) or computational notebooks (which support some level of prose and interactivity, but are notoriously terrible for explanation)</li>
 </ul>
-<h2 id="research-questions-and-challenges">Research questions and challenges</h2>
+<p>The idea is to make a real environment for creating &quot;model cards&quot; to make models more easily understandable and auditable to a lay technical audience, keeping this documentation tightly linked to the code, so it's easier to understand and doesn't go out of sync. (Another idea is to just let people write the specification and synthesize the model from that--but that seems hard.)</p>
+<p>The things that are out of scope for this project are the things that are out of scope for any piece of technical documentation, including:</p>
+<ul>
+<li>The ability to develop new model architectures, as in a computational notebook or dev environment.</li>
+<li>The ability to perform training, inference, or evaluation.</li>
+<li>The ability to debug models or debug datasets, as in a model development environment.</li>
+<li>Any research technique for ensuring &quot;fairness, accountability, and transparency,&quot; especially those that are specialized to models for particular purposes or with specific architectures.</li>
+</ul>
+<h2 id="research-points-to-consider">Research points to consider</h2>
 <p>Questions</p>
 <ul>
-<li>TODO</li>
+<li>Pain points: How can we make an authoring environment for explaining deep learning models that is most useful for authors; e.g. what are they trying to say or do that existing tools don't support well?</li>
+<li>Pain points: How can we design an explanatory medium for deep learning models that is most useful for readers; e.g. what are they trying to learn or do that existing artifacts don't support well?</li>
+<li>What are the right authoring primitives for a computational medium for <em>explanation</em>?</li>
+<li>What are the right domain primitives to provide for the domain of deep learning, and at what level of abstraction?</li>
+<li>Should we do a formative study, and if so, who can we interview? Who should we recruit for an evaluation study?</li>
 </ul>
 <p>Challenges</p>
 <ul>
-<li>TODO</li>
+<li>Is the approach interesting to the wider ML community? e.g. Are questions of design, training/evaluation/inference, data, or FATML just more important to the community? Do they care about specification/explanation/documentation? Is that demo going to blow people away?</li>
+<li>Engineering: Can we build this medium in the browser on tensorflow.js?</li>
+<li>How does tf.js model deep learning models, and is it the right level of abstraction for us (as designers/implementers)?</li>
+<li>What models would we be documenting as examples? Are those compelling and at the right level of difficulty to convince people that this is not a toy?</li>
 </ul>
-<h2 id="technical-next-steps">Technical next steps</h2>
-<p>can we explain tf.js demos? https://www.tensorflow.org/js/demos</p>
-<p>https://github.com/tensorflow/tfjs-models/blob/master/posenet/src/posenet_model.ts</p>
-<p>https://github.com/tensorflow/tfjs-models/blob/master/knn-classifier/demo/index.js</p>
-<p>Are there already specs for high-assurance algos https://ainowinstitute.org/aap-toolkit.pdf</p>
-<p>does tf.js have a tensorboard equivalent?</p>
-<p>I mean, at this point, you need to really be able to understand and explain the models yourself?</p>
-<p>Who has done this by hand, but really well?</p>
+<p>Contributions</p>
+<ul>
+<li>TODO: To come. (The contributions would be answers to the research questions above.)</li>
+</ul>
+<p>Opportunities</p>
+<ul>
+<li>It would be really cool to integrate this project as documentation of real production models at MS or somewhere in the public sector.</li>
+<li>If the project works, there are many interesting opportunities to extend it from &quot;static&quot; documentation to &quot;dynamic&quot; documentation, e.g. it lives with the model and changes with it; it documents the running model and not just the program.</li>
+</ul>
+<h2 id="related-work">Related work</h2>
+<p>The idea for this project is <em>not</em> to provide what any of the projects below provide, but they are all certainly related.</p>
+<h3 id="making-models">Making models</h3>
+<p>Tensorflow, etc.</p>
+<h3 id="model-debugging">Model debugging</h3>
+<p>Projects for debugging models, figuring out why your model isn’t doing the thing it was supposed to do, model transparency.</p>
+<ul>
+<li>GANvis, etc.</li>
+<li>Transparency techniques</li>
+</ul>
+<h3 id="computational-notebooks">Computational notebooks</h3>
+<p>Notebooks are well-known for being caught between exploration and explanation.</p>
+<p>Some notebook software is Colab, Jupyter, Observable, etc. Some specific examples of notebooks:</p>
+<ul>
+<li>Distill colab notebook for <a href="https://colab.research.google.com/github/tensorflow/lucid/blob/master/notebooks/activation-atlas/activation-atlas-simple.ipynb">activation atlas article</a></li>
+<li><a href="http://d2l.ai/chapter_multilayer-perceptrons/mlp-scratch.html#the-loss-function">Notebook from d2l.ai textbook on MLP</a>. In this notebook, they still put in pictures and notation to explain the model.</li>
+<li><a href="https://colab.research.google.com/github/d2l-ai/d2l-en-colab/blob/master/chapter_convolutional-neural-networks/pooling.ipynb#scrollTo=Ql_gtyIxNkJO">Notebook from d2l.ai textbook on pooling</a></li>
+</ul>
+<h3 id="visual-environments-for-creating-models">Visual environments for creating models</h3>
+<ul>
+<li><a href="https://app.reduct.video/e/the-dynamic-media-dream-e4ed367417-4d5acec7aeed995cf021/">Dan Amelang's work on executable neural network visual representations</a> (very related)</li>
+<li><a href="https://runwayml.com/">Runway</a></li>
+<li><a href="http://lobe.ai/">Lobe</a></li>
+<li><a href="https://dl.sony.com/console/#/project">Sony neural network console</a>
+<ul>
+<li><a href="https://support.dl.sony.com/docs/tutorial-training-using-a-sample-project/">docs</a></li>
+</ul></li>
+</ul>
+<h3 id="neural-network-playgrounds">Neural network playgrounds</h3>
+<ul>
+<li><a href="https://playground.tensorflow.org/#activation=tanh&amp;batchSize=10&amp;dataset=circle&amp;regDataset=reg-plane&amp;learningRate=0.03&amp;regularizationRate=0&amp;noise=0&amp;networkShape=4,2&amp;seed=0.05915&amp;showTestData=false&amp;discretize=false&amp;percTrainData=50&amp;x=true&amp;y=true&amp;xTimesY=false&amp;xSquared=false&amp;ySquared=false&amp;cosX=false&amp;sinX=false&amp;cosY=false&amp;sinY=false&amp;collectStats=false&amp;problem=classification&amp;initZero=false&amp;hideText=false">tensorflow playground</a></li>
+</ul>
+<h3 id="model-documentation">Model documentation</h3>
+<ul>
+<li><a href="https://arxiv.org/pdf/1810.03993.pdf">Model cards</a> (FAT* '19) (very related)</li>
+<li><a href="https://www.microsoft.com/en-us/research/uploads/prod/2019/01/1803.09010.pdf">Datasheets for datasets</a> (workshop on FATML ’18)</li>
+</ul>
+<h3 id="neural-network-architecture-visualization-libraries">Neural network architecture visualization libraries</h3>
+<ul>
+<li>Tensorboard</li>
+<li><a href="https://datascience.stackexchange.com/questions/14899/how-to-draw-deep-learning-network-architecture-diagrams">stackexchange question</a></li>
+<li><a href="https://github.com/ashishpatel26/Tools-to-Design-or-Visualize-Architecture-of-Neural-Network">GitHub repo of examples</a></li>
+</ul>
+<h3 id="neural-network-textbook-chapters-journal-articles-explainers">Neural network textbook chapters, journal articles, explainers</h3>
+<ul>
+<li>Distill</li>
+<li>Apple Machine Learning Journal</li>
+<li>Deep Learning Book</li>
+<li>d2l.ai</li>
+<li><a href="https://idyll-lang.org/gallery/the-beginner-s-guide-to-dimensionality-reduction">Idyll, Beginner's guide to PCA</a></li>
+</ul>
+<h2 id="next-steps">Next steps</h2>
+<p>Is someone already working on this?</p>
+<ul>
+<li>Maybe at MSR?</li>
+<li>friend with domain expertise seems very excited about the idea and it doesn't seem to exist yet</li>
+</ul>
+<p>Look into pain points and formative studies?</p>
+<p>Are there already specs for high-assurance algos?</p>
+<ul>
+<li><a href="https://ainowinstitute.org/aap-toolkit.pdf">maybe the algorithmic accountability people know of some</a></li>
+<li>friend says &quot;nyc is notoriously cagey about their automated decision systems to a suppression extent, so no depending on the agency&quot;</li>
+</ul>
+<p>Who has done this by hand, but really well or poorly?</p>
+<ul>
+<li>model zoo has some <a href="https://modelzoo.co/model/yolo-tensorflow">example model docs</a></li>
+</ul>
+<p>Can we explain tensorflow.js demos?</p>
+<ul>
+<li><a href="https://www.tensorflow.org/js/demos">tf.js demos</a></li>
+<li><a href="https://github.com/tensorflow/tfjs-models/blob/master/posenet/src/posenet_model.ts">posenet ts code</a></li>
+<li><a href="https://github.com/tensorflow/tfjs-models/blob/master/knn-classifier/demo/index.js">knn-classifier ts code</a></li>
+<li><a href="https://js.tensorflow.org/api_node/1.1.0/#node.tensorBoard">tf.js tensorboard</a></li>
+</ul>
+<p>Is there some way to scope this down, or stage the work?</p>
 </div>
 </div>
 <script>

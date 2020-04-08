@@ -114,6 +114,7 @@ Questions
 Challenges
 
 - Is the approach interesting to the wider ML community? e.g. Are questions of design, training/evaluation/inference, data, or FATML just more important to the community? Do they care about specification/explanation/documentation? Is that demo going to blow people away?
+- Is the approach interesting to the wider HCI or PL community? e.g. Are questions of model deployment or verification more interesting to them?
 - Engineering: Can we build this medium in the browser on tensorflow.js?
 - How does tf.js model deep learning models, and is it the right level of abstraction for us (as designers/implementers)?
 - What models would we be documenting as examples? Are those compelling and at the right level of difficulty to convince people that this is not a toy?

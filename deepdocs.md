@@ -33,7 +33,7 @@
 <!-- <script src="lib/annotator-full.1.2.10/annotator-full.min.js"></script> -->
 <!-- <link rel="stylesheet" href="lib/annotator-full.1.2.10/annotator.min.css"> -->
   
-# DeepDocs: Toward a rich explanatory medium for deep learning models
+# DeepDocs: Toward a rich explanatory medium for deep learning model architectures
 
 _(hover over a paragraph to make a comment)_
 
@@ -51,23 +51,28 @@ Clearly, what is needed is a hybrid medium that centers all of these modalities 
 
 *Hypothesis 3*: Our particular design of this new medium will, in fact, both improve the authoring experience for authors and result in more helpful artifacts for readers.
 
+(TODO: Make a mockup of the authoring experience, reading experience, and sample documentation for real ML models.)
+
 Such a project has the potential to provide the basis for clear human-to-human communication and specification of deep learning algorithms, enabling these crucial algorithms to be more clearly understood, audited, and edited by domain experts and by interested members of the public.
+
+## Design
 
 To start off, we think such a medium would include first-class support for the following modes of explaining a _deep learning model architecture_ at a static level (i.e. not running it):
 
 - prose
-- concrete examples, e.g. input-output pairs
 - math notation
 - pseudocode
 - diagrams, e.g. pictures of model architectures
-- plots, e.g. visualization of the loss function
 - code
 - references and deeplinks to the model that link several representations (prose, math, picture, code)
 
-The medium could be extended to support documenting _specific_ models at a static level:
+The medium could be extended with more modes that support documenting _specific_ models at a static level:
 
+- concrete examples, e.g. input-output pairs
 - visualizing specific trained models (with specific parameters) and the performance or failures of these models
-- documenting the datasets and training processes that gave rise to these parameters
+- documenting the datasets, data transforms, and training processes that gave rise to these parameters
+- plots, e.g. visualization of the loss function, or of datasets
+- linking these additional representations
 
 Then, it could be further extended to include support for the following modalities for documenting a specific model at a dynamic level:
 
@@ -77,6 +82,15 @@ Then, it could be further extended to include support for the following modaliti
 
 *Hypothesis 2* (that designing this environment is a tractable problem) is likely to be true because the domain of deep learning has its own very domain-specific language of biases, weights, layers, inputs, outputs, etc. that can be modeled in a domain-specific language or annotations. (Also, we have expertise in domain-specific language design, making diagrams, interface design, data science, explaining machine learning models, etc.)
 
+The things that are out of scope for this project are the things that are out of scope for any piece of technical documentation, including:
+
+- The ability to develop new model architectures, as in a computational notebook or dev environment.
+- The ability to perform training, inference, or evaluation.
+- The ability to debug models or debug datasets, as in a model development environment.
+- Any research technique for ensuring "fairness, accountability, and transparency," especially those that are specialized to models for particular purposes or with specific architectures.
+
+## Evaluation
+
 The ideal demo (or teaser figure) for such a medium looks like this:
 
 - A video showing the authoring experience for documenting an existing realistic tensorflow.js model (e.g. for computer vision): the environment puts all the parts of the model into a "visual vocabulary" that the author can draw from, and the author, as they write, can seamlessly make references to the code and link it to the mathematics of the model and a diagram of the model
@@ -85,7 +99,7 @@ The ideal demo (or teaser figure) for such a medium looks like this:
 - The final document, compared side-by-side to 1. the other docs that authors made in-environment and out-of-environment, showing that the final doc written in this env is clearly richer and linked directly to the code, and 2. other docs that people have made by hand (not in this study) are clearly ad-hoc and worse. 
     - A reader study asking technically-proficient laypeople which documentation they preferred, and possibly a test to see which documentation they learned more from reading, ideally showing that these docs are better.
 
-(TODO: Make a mockup of the authoring experience, reading experience, and sample documentation for real ML models.)
+## Related work
 
 The idea is a combination of a couple of main pieces of related work:
 
@@ -96,13 +110,6 @@ The idea is a combination of a couple of main pieces of related work:
 - Existing rich documentation for models, such as technical explainer articles (e.g. in _Distill_) or computational notebooks (which support some level of prose and interactivity, but are notoriously terrible for explanation)
 
 The idea is to make a real environment for creating "model cards" to make models more easily understandable and auditable to a lay technical audience, keeping this documentation tightly linked to the code, so it's easier to understand and doesn't go out of sync. (Another idea is to just let people write the specification and synthesize the model from that--but that seems hard.)
-
-The things that are out of scope for this project are the things that are out of scope for any piece of technical documentation, including:
-
-- The ability to develop new model architectures, as in a computational notebook or dev environment.
-- The ability to perform training, inference, or evaluation.
-- The ability to debug models or debug datasets, as in a model development environment.
-- Any research technique for ensuring "fairness, accountability, and transparency," especially those that are specialized to models for particular purposes or with specific architectures.
 
 ## Research points to consider
 
@@ -135,7 +142,7 @@ Opportunities
 - It would be really cool to integrate this project as documentation of real production models at MS or somewhere in the public sector.
 - If the project works, there are many interesting opportunities to extend it from "static" documentation to "dynamic" documentation, e.g. it lives with the model and changes with it; it documents the running model and not just the program.
 
-## Related work
+## More related work
 
 The idea for this project is *not* to provide what any of the projects below provide, but they are all certainly related.
 

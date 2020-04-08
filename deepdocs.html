@@ -23,7 +23,7 @@ deepdocs
 <!--      crossorigin="anonymous"></script> -->
 <!-- <script src="lib/annotator-full.1.2.10/annotator-full.min.js"></script> -->
 <!-- <link rel="stylesheet" href="lib/annotator-full.1.2.10/annotator.min.css"> -->
-<h1 id="deepdocs-toward-a-rich-explanatory-medium-for-deep-learning-models">DeepDocs: Toward a rich explanatory medium for deep learning models</h1>
+<h1 id="deepdocs-toward-a-rich-explanatory-medium-for-deep-learning-model-architectures">DeepDocs: Toward a rich explanatory medium for deep learning model architectures</h1>
 <p><em>(hover over a paragraph to make a comment)</em></p>
 <h2 id="proposal">Proposal</h2>
 <p>As machine learning models become woven into the fabric of daily life, it's important to provide clear explanations of how these models work, from human to human. Not only are clear explanations important for technically-minded people like model developers and users (e.g. data scientists and UI designers), it's important for general scientific literacy. A policy expert, lawmaker, judge, activist, or member of the public should have the right to read the documentation of a machine learning model deployed by the government that might make decisions concerning their daily lives, such as food stamp allocation or bail decisions. It is also particularly important to make it easier to document deep learning algorithms given their reputation as &quot;black boxes&quot; and &quot;AI magic.&quot;</p>
@@ -32,22 +32,25 @@ deepdocs
 <p><em>Hypothesis 1</em>: Providing a rich explanatory medium for deep learning models will make it easier for experts to author documentation of models. This documentation will be easier for technically-minded laypeople to understand and to verify.</p>
 <p><em>Hypothesis 2</em>: We can design an environment for authoring rich, executable, visual documentation linked directly to the math and code for a real machine learning model, running in the browser.</p>
 <p><em>Hypothesis 3</em>: Our particular design of this new medium will, in fact, both improve the authoring experience for authors and result in more helpful artifacts for readers.</p>
+<p>(TODO: Make a mockup of the authoring experience, reading experience, and sample documentation for real ML models.)</p>
 <p>Such a project has the potential to provide the basis for clear human-to-human communication and specification of deep learning algorithms, enabling these crucial algorithms to be more clearly understood, audited, and edited by domain experts and by interested members of the public.</p>
+<h2 id="design">Design</h2>
 <p>To start off, we think such a medium would include first-class support for the following modes of explaining a <em>deep learning model architecture</em> at a static level (i.e. not running it):</p>
 <ul>
 <li>prose</li>
-<li>concrete examples, e.g. input-output pairs</li>
 <li>math notation</li>
 <li>pseudocode</li>
 <li>diagrams, e.g. pictures of model architectures</li>
-<li>plots, e.g. visualization of the loss function</li>
 <li>code</li>
 <li>references and deeplinks to the model that link several representations (prose, math, picture, code)</li>
 </ul>
-<p>The medium could be extended to support documenting <em>specific</em> models at a static level:</p>
+<p>The medium could be extended with more modes that support documenting <em>specific</em> models at a static level:</p>
 <ul>
+<li>concrete examples, e.g. input-output pairs</li>
 <li>visualizing specific trained models (with specific parameters) and the performance or failures of these models</li>
-<li>documenting the datasets and training processes that gave rise to these parameters</li>
+<li>documenting the datasets, data transforms, and training processes that gave rise to these parameters</li>
+<li>plots, e.g. visualization of the loss function, or of datasets</li>
+<li>linking these additional representations</li>
 </ul>
 <p>Then, it could be further extended to include support for the following modalities for documenting a specific model at a dynamic level:</p>
 <ul>
@@ -56,6 +59,14 @@ deepdocs
 <li>running the loss function</li>
 </ul>
 <p><em>Hypothesis 2</em> (that designing this environment is a tractable problem) is likely to be true because the domain of deep learning has its own very domain-specific language of biases, weights, layers, inputs, outputs, etc. that can be modeled in a domain-specific language or annotations. (Also, we have expertise in domain-specific language design, making diagrams, interface design, data science, explaining machine learning models, etc.)</p>
+<p>The things that are out of scope for this project are the things that are out of scope for any piece of technical documentation, including:</p>
+<ul>
+<li>The ability to develop new model architectures, as in a computational notebook or dev environment.</li>
+<li>The ability to perform training, inference, or evaluation.</li>
+<li>The ability to debug models or debug datasets, as in a model development environment.</li>
+<li>Any research technique for ensuring &quot;fairness, accountability, and transparency,&quot; especially those that are specialized to models for particular purposes or with specific architectures.</li>
+</ul>
+<h2 id="evaluation">Evaluation</h2>
 <p>The ideal demo (or teaser figure) for such a medium looks like this:</p>
 <ul>
 <li>A video showing the authoring experience for documenting an existing realistic tensorflow.js model (e.g. for computer vision): the environment puts all the parts of the model into a &quot;visual vocabulary&quot; that the author can draw from, and the author, as they write, can seamlessly make references to the code and link it to the mathematics of the model and a diagram of the model
@@ -68,7 +79,7 @@ deepdocs
 <li>A reader study asking technically-proficient laypeople which documentation they preferred, and possibly a test to see which documentation they learned more from reading, ideally showing that these docs are better.</li>
 </ul></li>
 </ul>
-<p>(TODO: Make a mockup of the authoring experience, reading experience, and sample documentation for real ML models.)</p>
+<h2 id="related-work">Related work</h2>
 <p>The idea is a combination of a couple of main pieces of related work:</p>
 <ul>
 <li>Rich, dynamic environments for learning mathematics: can we make something as good as the <a href="https://mathigon.org/course/fractals/introduction">Mathigon environment for learning about fractals</a> but for machine learning models? Note the deeplinking, interactivity, etc.</li>
@@ -78,13 +89,6 @@ deepdocs
 <li>Existing rich documentation for models, such as technical explainer articles (e.g. in <em>Distill</em>) or computational notebooks (which support some level of prose and interactivity, but are notoriously terrible for explanation)</li>
 </ul>
 <p>The idea is to make a real environment for creating &quot;model cards&quot; to make models more easily understandable and auditable to a lay technical audience, keeping this documentation tightly linked to the code, so it's easier to understand and doesn't go out of sync. (Another idea is to just let people write the specification and synthesize the model from that--but that seems hard.)</p>
-<p>The things that are out of scope for this project are the things that are out of scope for any piece of technical documentation, including:</p>
-<ul>
-<li>The ability to develop new model architectures, as in a computational notebook or dev environment.</li>
-<li>The ability to perform training, inference, or evaluation.</li>
-<li>The ability to debug models or debug datasets, as in a model development environment.</li>
-<li>Any research technique for ensuring &quot;fairness, accountability, and transparency,&quot; especially those that are specialized to models for particular purposes or with specific architectures.</li>
-</ul>
 <h2 id="research-points-to-consider">Research points to consider</h2>
 <p>Questions</p>
 <ul>
@@ -117,7 +121,7 @@ deepdocs
 <li>It would be really cool to integrate this project as documentation of real production models at MS or somewhere in the public sector.</li>
 <li>If the project works, there are many interesting opportunities to extend it from &quot;static&quot; documentation to &quot;dynamic&quot; documentation, e.g. it lives with the model and changes with it; it documents the running model and not just the program.</li>
 </ul>
-<h2 id="related-work">Related work</h2>
+<h2 id="more-related-work">More related work</h2>
 <p>The idea for this project is <em>not</em> to provide what any of the projects below provide, but they are all certainly related.</p>
 <h3 id="making-models">Making models</h3>
 <p>Tensorflow, etc.</p>

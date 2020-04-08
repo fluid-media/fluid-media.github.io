@@ -109,7 +109,7 @@ Questions
 
 - How important is it to document a specific trained model, vs. documenting the more generic model architecture? The latter is easier; the former seems potentially more useful, but harder technically (and a more crowded space).
     - The number of people who _train_ models seems much larger than the number of people who _design_ models. So, shouldn't it be more important to make it easier to document training processes?
-    - Some large model architectures are now designed by computers (e.g. AutoML). How can you write technical docs for an architecture that a person didn't design?
+    - Some large model architectures are now designed by computers (e.g. AutoML). How can you write technical docs for an architecture that a person didn't design, and that likely nobody understands perfectly?
 - Pain points: How can we make an authoring environment for explaining deep learning models that is most useful for authors; e.g. what are they trying to say or do that existing tools don't support well? 
 - Pain points: How can we design an explanatory medium for deep learning models that is most useful for readers; e.g. what are they trying to learn or do that existing artifacts don't support well?
 - What are the right authoring primitives for a computational medium for _explanation_? 

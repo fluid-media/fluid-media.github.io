@@ -15,9 +15,14 @@
 <nav class="toc toc-right js-toc relative z-1 transition--300 absolute pa4 is-position-fixed">
 </nav>
 
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  crossorigin="anonymous"></script>
+
 <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
-<!-- <script src="lib/comments/inlineDisqussions.js"></script> -->
-<!-- <link rel="stylesheet" type="text/css" href="inlineDisqussions.css" /> -->
+<script src="lib/comments/inlineDisqussions.js"></script>
+<link rel="stylesheet" type="text/css" href="inlineDisqussions.css" />
 
 <div class="content js-toc-content pa4">
 
@@ -134,20 +139,17 @@ Who has done this by hand, but really well?
 
 </div>
 
-<!-- <script> -->
-<!-- disqus_shortname = 'fluid_media'; -->
-<!-- jQuery(document).ready(function() { -->
-<!-- 	jQuery("p").inlineDisqussions(); -->
-<!-- }); -->
-<!-- </script> -->
+<script>
+disqus_shortname = 'fluid_media';
+jQuery(document).ready(function() {
+	jQuery("p").inlineDisqussions();
+});
+</script>
 
 <!-- <div id="commento"></div> -->
 <!-- <script defer src="https://cdn.commento.io/js/commento.js"></script> -->
 
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-	  crossorigin="anonymous"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
 <script src="lib/jquery.sidenotes.js"></script>
 

@@ -51,9 +51,9 @@ Clearly, what is needed is a hybrid medium that centers all of these modalities 
 
 *Hypothesis 3*: Our particular design of this new medium will, in fact, both improve the authoring experience for authors and result in more helpful artifacts for readers.
 
-Such a project has the potential to provide the basis for clear human-to-human communication and specification of deep learning algorithms, enabling these crucial algorithms to be more clearly understood, audited, and edited by domain experts and by an interested member of the public.
+Such a project has the potential to provide the basis for clear human-to-human communication and specification of deep learning algorithms, enabling these crucial algorithms to be more clearly understood, audited, and edited by domain experts and by interested members of the public.
 
-Such a medium would include first-class support for the following _explanatory, narrative_ modalities at a static, generic specification level:
+To start off, we think such a medium would include first-class support for the following modes of explaining a _deep learning model architecture_ at a static level (i.e. not running it):
 
 - prose
 - concrete examples, e.g. input-output pairs
@@ -61,18 +61,19 @@ Such a medium would include first-class support for the following _explanatory, 
 - pseudocode
 - diagrams, e.g. pictures of model architectures
 - plots, e.g. visualization of the loss function
+- code
 - references and deeplinks to the model that link several representations (prose, math, picture, code)
 
-It might include support for documenting _specific_ deployed models:
+The medium could be extended to support documenting _specific_ models at a static level:
 
-- visualizing specific trained networks (with specific parameters) and the performance or failures of these models
+- visualizing specific trained models (with specific parameters) and the performance or failures of these models
 - documenting the datasets and training processes that gave rise to these parameters
-- running the loss function
 
-It may include support for the following modalities at a dynamic level:
+Then, it could be further extended to include support for the following modalities for documenting a specific model at a dynamic level:
 
 - the ability to run examples in the browser (e.g. code snippets or inference)
 - the ability to visualize and document the training process (optimization)
+- running the loss function
 
 *Hypothesis 2* (that designing this environment is a tractable problem) is likely to be true because the domain of deep learning has its own very domain-specific language of biases, weights, layers, inputs, outputs, etc. that can be modeled in a domain-specific language or annotations. (Also, we have expertise in domain-specific language design, making diagrams, interface design, data science, explaining machine learning models, etc.)
 
@@ -107,7 +108,7 @@ The things that are out of scope for this project are the things that are out of
 
 Questions
 
-- How important is it to document a specific trained model, vs. documenting the more generic model architecture? The latter is easier; the former seems potentially more useful, but harder technically (and a more crowded space).
+- How important is it to document a specific trained model, vs. documenting the more generic model architecture? Documenting a generic model is easier; documenting a specific trained model seems potentially more useful, but harder technically (and a more crowded space).
     - The number of people who _train_ models seems much larger than the number of people who _design_ models. So, shouldn't it be more important to make it easier to document training processes?
     - Some large model architectures are now designed by computers (e.g. AutoML). How can you write technical docs for an architecture that a person didn't design, and that likely nobody understands perfectly?
 - Pain points: How can we make an authoring environment for explaining deep learning models that is most useful for authors; e.g. what are they trying to say or do that existing tools don't support well? 

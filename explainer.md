@@ -142,9 +142,17 @@ Who has done this by hand, but really well?
 <script>
 disqus_shortname = 'fluid-media';
 jQuery(document).ready(function() {
-	jQuery("p").inlineDisqussions();
+jQuery("p").inlineDisqussions({
+identifier: 'disqussion',
+displayCount: true,
+highlighted: false,
+position: 'right',
+background: 'white',
+maxWidth: 9999
+});
 });
 </script>
+	<!-- jQuery("p").inlineDisqussions(); -->
 
 <!-- <div id="commento"></div> -->
 <!-- <script defer src="https://cdn.commento.io/js/commento.js"></script> -->

@@ -71,7 +71,7 @@ It may include support for the following modalities at a dynamic level:
 - the ability to run examples in the browser (e.g. code snippets or inference)
 - the ability to visualize and document the training process (optimization)
 
-*Hypothesis 2* (that designing this environment is a tractable problem) is likely to be true because the domain of deep learning has its own very domain-specific language of biases, weights, layers, inputs, outputs, etc. that can be modeled in a domain-specific language or annotations. 
+*Hypothesis 2* (that designing this environment is a tractable problem) is likely to be true because the domain of deep learning has its own very domain-specific language of biases, weights, layers, inputs, outputs, etc. that can be modeled in a domain-specific language or annotations. (Also, we have expertise in domain-specific language design, making diagrams, interface design, data science, explaining machine learning models, etc.)
 
 The ideal demo (or teaser figure) for such a medium looks like this:
 

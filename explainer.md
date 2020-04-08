@@ -140,7 +140,7 @@ Who has done this by hand, but really well?
 </div>
 
 <script>
-disqus_shortname = 'fluid_media';
+disqus_shortname = 'fluid-media';
 jQuery(document).ready(function() {
 	jQuery("p").inlineDisqussions();
 });
